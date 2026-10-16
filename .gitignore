@@ -1,1 +1,24 @@
 .venv-*/
+
+# Future generated artifacts only; existing research records remain tracked.
+__pycache__/
+*.py[cod]
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+*.db-wal
+*.db-shm
+*.cubin
+*.o
+*.obj
+**/kernels/elementwise_add
+**/kernels/vector_runner
+*.ptx
+*.fatbin
+*.so
+*.dll
+*.exe
+*.a
+*.lib
+.abacus.donotdelete
