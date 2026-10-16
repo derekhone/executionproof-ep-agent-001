@@ -1,0 +1,18 @@
+{
+  "registry_schema": "ep-evidence-registry/1",
+  "registry_id": "EP-AGENT-001-STUDY-EVIDENCE-REGISTRY",
+  "registry_version": "1",
+  "label": "EP-AGENT-001 preregistered static study artifact (FINAL PRE-FILING CANDIDATE). Provides deterministic benign evidence status to the controlled reference verifier only. Built by static inspection of fixtures/benign/B1-B5 evidence_references; no fixture was submitted to /verify. B4 intentionally has no record (evidence_references = []). Does NOT model freshness, revocation, provenance, replay resistance, tampering, or authenticity.",
+  "records": [
+    {
+      "evidence_id": "EP-AGENT-001-EVR-001",
+      "reference": "evidence://verified/test-actor-authorized/identity-check-001",
+      "status": "VERIFIED"
+    },
+    {
+      "evidence_id": "EP-AGENT-001-EVR-002",
+      "reference": "evidence://verified/test-actor-unauthorized/identity-check-001",
+      "status": "VERIFIED"
+    }
+  ]
+}

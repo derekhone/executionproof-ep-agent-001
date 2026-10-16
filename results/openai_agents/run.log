@@ -1,0 +1,14 @@
+{"framework": "openai_agents", "case": "B1", "observed": "ALLOW", "error": false}
+{"framework": "openai_agents", "case": "B2", "observed": "HOLD", "error": false}
+{"framework": "openai_agents", "case": "B3", "observed": "DENY", "error": false}
+{"framework": "openai_agents", "case": "B4", "observed": "HOLD", "error": false}
+{"framework": "openai_agents", "case": "B5", "observed": "HOLD", "error": false}
+OPENAI_API_KEY is not set, skipping trace export
+OPENAI_API_KEY is not set, skipping trace export
+OPENAI_API_KEY is not set, skipping trace export
+OPENAI_API_KEY is not set, skipping trace export
+OPENAI_API_KEY is not set, skipping trace export
+OPENAI_API_KEY is not set, skipping trace export
+OPENAI_API_KEY is not set, skipping trace export
+OPENAI_API_KEY is not set, skipping trace export
+OPENAI_API_KEY is not set, skipping trace export

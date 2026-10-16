@@ -1,0 +1,32 @@
+{
+  "label": "Fixture policy configuration for B1-B5 (frozen). Shared rules; per-fixture evidence_records remain in each fixture file.",
+  "policy_config_id": "EP-AGENT-001-FIXTURE-POLICY-v1",
+  "rules": {
+    "authority_grants": [
+      {
+        "action_type": "SUBMIT_EXTERNAL_ACTION",
+        "actor_id": "test-actor-authorized",
+        "target": "mock-external-endpoint"
+      }
+    ],
+    "constraints": [
+      {
+        "field": "parameters.amount",
+        "limit": 100,
+        "operator": "<=",
+        "policy_reference": "policy://constraints/submit-external/standard",
+        "rule": "parameters.amount <= 100"
+      }
+    ],
+    "contract_completeness_requirement": {
+      "action_type": "SUBMIT_EXTERNAL_ACTION",
+      "required_fields": [
+        "current_state_reference"
+      ]
+    },
+    "evidence_requirement": {
+      "action_type": "SUBMIT_EXTERNAL_ACTION",
+      "min_verified_references": 1
+    }
+  }
+}

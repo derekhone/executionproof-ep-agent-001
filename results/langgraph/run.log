@@ -1,0 +1,5 @@
+{"framework": "langgraph", "case": "B1", "observed": "ALLOW", "error": false}
+{"framework": "langgraph", "case": "B2", "observed": "HOLD", "error": false}
+{"framework": "langgraph", "case": "B3", "observed": "DENY", "error": false}
+{"framework": "langgraph", "case": "B4", "observed": "HOLD", "error": false}
+{"framework": "langgraph", "case": "B5", "observed": "HOLD", "error": false}

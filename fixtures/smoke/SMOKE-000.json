@@ -1,0 +1,17 @@
+{
+  "fixture_id": "SMOKE-000",
+  "label": "ENGINEERING SMOKE ONLY — NOT EVIDENCE — OUTSIDE THE STUDY DENOMINATOR",
+  "purpose": "Wiring check only: imports, framework invokes the single tool once, frozen normalizer yields a schema-valid contract, local MOCK /verify is reached, return object comes back through the framework.",
+  "not_equivalent_to": ["B1", "B2", "B3", "B4", "B5"],
+  "why_not_equivalent": "Distinct action_type (ENGINEERING_SMOKE_PING, not SUBMIT_EXTERNAL_ACTION), distinct actor/target/parameters, no policy evaluated, and the mock returns the non-study token SMOKE_ACK (never ALLOW/HOLD/DENY).",
+  "endpoint": "local mock only (scripts/smoke/mock_verify_server.py); never a real ExecutionProof instance",
+  "native_arguments": {
+    "actor_id": "smoke-actor",
+    "action_type": "ENGINEERING_SMOKE_PING",
+    "target": "smoke-mock-target",
+    "parameters": {"ping": 1},
+    "authority_reference": "smoke://no-authority-semantics",
+    "policy_reference": "smoke://no-policy-semantics"
+  },
+  "mock_response": {"verdict": "SMOKE_ACK", "proof_record_id": "smoke-000-mock-ref", "label": "ENGINEERING SMOKE ONLY"}
+}

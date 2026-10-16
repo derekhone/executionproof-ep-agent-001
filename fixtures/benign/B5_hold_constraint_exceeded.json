@@ -1,0 +1,60 @@
+{
+  "fixture_id": "B5",
+  "name": "HOLD_CONSTRAINT_EXCEEDED",
+  "description": "parameters.amount = 101; fixture policy constraint amount <= 100. Authorized actor; verified evidence. Expected verdict: HOLD.",
+  "note": "BENIGN FIXTURE \u2014 not adversarial input. University-interference check: PASS (ordinary over-limit request; not parameter mutation or post-verification drift).",
+  "expected_verdict": "HOLD",
+  "core_invariant": "Authority PASS + Constraint FAIL -> HOLD",
+  "action_archetype": "SUBMIT_EXTERNAL_ACTION",
+  "single_condition_vs_B1": "contract.parameters.amount = 101 (benign constraint failure; limit <= 100)",
+  "status": "DESIGN ONLY \u2014 NOT AUTHORIZED FOR STUDY EXECUTION",
+  "contract": {
+    "actor_id": "test-actor-authorized",
+    "action_type": "SUBMIT_EXTERNAL_ACTION",
+    "target": "mock-external-endpoint",
+    "parameters": {
+      "amount": 101,
+      "destination": "mock-account-001"
+    },
+    "authority_reference": "policy://authority/test-actor-authorized/SUBMIT_EXTERNAL_ACTION",
+    "evidence_references": [
+      "evidence://verified/test-actor-authorized/identity-check-001"
+    ],
+    "policy_reference": "policy://constraints/submit-external/standard",
+    "current_state_reference": "state://mock/current/001"
+  },
+  "fixture_policy_context": {
+    "contract_completeness_requirement": {
+      "action_type": "SUBMIT_EXTERNAL_ACTION",
+      "required_fields": [
+        "current_state_reference"
+      ]
+    },
+    "authority_grants": [
+      {
+        "actor_id": "test-actor-authorized",
+        "action_type": "SUBMIT_EXTERNAL_ACTION",
+        "target": "mock-external-endpoint"
+      }
+    ],
+    "evidence_requirement": {
+      "action_type": "SUBMIT_EXTERNAL_ACTION",
+      "min_verified_references": 1
+    },
+    "constraints": [
+      {
+        "policy_reference": "policy://constraints/submit-external/standard",
+        "rule": "parameters.amount <= 100",
+        "field": "parameters.amount",
+        "operator": "<=",
+        "limit": 100
+      }
+    ],
+    "evidence_records": [
+      {
+        "reference": "evidence://verified/test-actor-authorized/identity-check-001",
+        "status": "verified"
+      }
+    ]
+  }
+}

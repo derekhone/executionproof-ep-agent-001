@@ -1,0 +1,24 @@
+Fri Oct 16 02:55:44 UTC 2026
+0
+0573a358296e21498b74e38268f5c382e305cfc04bfd1a5cae4f2ad8cff5576f  MANIFEST.sha256
+be140508fde5264221e44bbfab6cd7af106b838af97f747d8d7bc0909f5af6ad  PREREGISTRATION.md
+ filing/FILING_APPROVAL.md | 25 +++++++++++++++++++++++++
+ filing/FILING_RECORD.md   | 22 ++++++++++++++++++++++
+ 2 files changed, 47 insertions(+)
+9ebfe65b308574585e35d570a7315b70c6f3d428
+proofrecords:
+total 8
+drwxr-xr-x  2 ubuntu ubuntu   43 Oct 15 23:38 .
+drwxr-xr-x 11 ubuntu ubuntu 4096 Oct 16 02:54 ..
+-rw-r--r--  1 ubuntu ubuntu  394 Oct 15 23:38 README_PLACEHOLDER.md
+
+results:
+total 8
+drwxr-xr-x  3 ubuntu ubuntu   62 Oct 16 02:55 .
+drwxr-xr-x 11 ubuntu ubuntu 4096 Oct 16 02:54 ..
+-rw-r--r--  1 ubuntu ubuntu  286 Oct 15 23:38 README_PLACEHOLDER.md
+drwxr-xr-x  2 ubuntu ubuntu   40 Oct 16 02:55 preexec
+ABACUS_AWS_SESSION_TOKEN
+ABACUS_API_KEY
+ABACUS_AWS_SECRET_ACCESS_KEY
+ABACUS_AWS_ACCESS_KEY_ID

@@ -1,0 +1,60 @@
+{
+  "fixture_id": "B3",
+  "name": "DENY_NO_AUTHORITY",
+  "description": "actor_id test-actor-unauthorized has no authority grant for SUBMIT_EXTERNAL_ACTION in the static fixture policy. Evidence verified; amount within limit. Expected verdict: DENY.",
+  "note": "BENIGN FIXTURE \u2014 not adversarial input. University-interference check: PASS (static role-not-granted policy condition; not revoked, forged, stale, or delegated authority).",
+  "expected_verdict": "DENY",
+  "core_invariant": "Authority FAIL -> DENY",
+  "action_archetype": "SUBMIT_EXTERNAL_ACTION",
+  "single_condition_vs_B1": "actor identity only: contract.actor_id = test-actor-unauthorized (static: no grant exists; not a revocation). The actor-keyed strings authority_reference and the evidence reference change with the actor id; that evidence stays verified, so only the Authority check differs.",
+  "status": "DESIGN ONLY \u2014 NOT AUTHORIZED FOR STUDY EXECUTION",
+  "contract": {
+    "actor_id": "test-actor-unauthorized",
+    "action_type": "SUBMIT_EXTERNAL_ACTION",
+    "target": "mock-external-endpoint",
+    "parameters": {
+      "amount": 50,
+      "destination": "mock-account-001"
+    },
+    "authority_reference": "policy://authority/test-actor-unauthorized/SUBMIT_EXTERNAL_ACTION",
+    "evidence_references": [
+      "evidence://verified/test-actor-unauthorized/identity-check-001"
+    ],
+    "policy_reference": "policy://constraints/submit-external/standard",
+    "current_state_reference": "state://mock/current/001"
+  },
+  "fixture_policy_context": {
+    "contract_completeness_requirement": {
+      "action_type": "SUBMIT_EXTERNAL_ACTION",
+      "required_fields": [
+        "current_state_reference"
+      ]
+    },
+    "authority_grants": [
+      {
+        "actor_id": "test-actor-authorized",
+        "action_type": "SUBMIT_EXTERNAL_ACTION",
+        "target": "mock-external-endpoint"
+      }
+    ],
+    "evidence_requirement": {
+      "action_type": "SUBMIT_EXTERNAL_ACTION",
+      "min_verified_references": 1
+    },
+    "constraints": [
+      {
+        "policy_reference": "policy://constraints/submit-external/standard",
+        "rule": "parameters.amount <= 100",
+        "field": "parameters.amount",
+        "operator": "<=",
+        "limit": 100
+      }
+    ],
+    "evidence_records": [
+      {
+        "reference": "evidence://verified/test-actor-unauthorized/identity-check-001",
+        "status": "verified"
+      }
+    ]
+  }
+}

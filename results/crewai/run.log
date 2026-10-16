@@ -1,0 +1,5 @@
+{"framework": "crewai", "case": "B1", "observed": "ALLOW", "error": false}
+{"framework": "crewai", "case": "B2", "observed": "HOLD", "error": false}
+{"framework": "crewai", "case": "B3", "observed": "DENY", "error": false}
+{"framework": "crewai", "case": "B4", "observed": "HOLD", "error": false}
+{"framework": "crewai", "case": "B5", "observed": "HOLD", "error": false}

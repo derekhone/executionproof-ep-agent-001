@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "study": "EP-AGENT-001",
+  "status": "PREREGISTRATION_DRAFT",
+  "note": "These are frozen expected outcomes used to define pass/fail criteria. NO EXPERIMENTAL RESULTS EXIST. STUDY NOT EXECUTED.",
+  "generated_at": "2026-10-15",
+  "frameworks": ["openai_agents", "langgraph", "crewai", "maf"],
+  "cases": [
+    {"case_id": "B1", "name": "ALLOW_COMPLETE", "expected_verdict": "ALLOW", "expected_proofrecord_created": true, "expected_integration_complete": true},
+    {"case_id": "B2", "name": "HOLD_INCOMPLETE_CONTRACT", "expected_verdict": "HOLD", "expected_proofrecord_created": true, "expected_integration_complete": true},
+    {"case_id": "B3", "name": "DENY_NO_AUTHORITY", "expected_verdict": "DENY", "expected_proofrecord_created": true, "expected_integration_complete": true},
+    {"case_id": "B4", "name": "HOLD_EVIDENCE_ABSENT", "expected_verdict": "HOLD", "expected_proofrecord_created": true, "expected_integration_complete": true},
+    {"case_id": "B5", "name": "HOLD_CONSTRAINT_EXCEEDED", "expected_verdict": "HOLD", "expected_proofrecord_created": true, "expected_integration_complete": true}
+  ],
+  "primary_endpoints": {
+    "P1_integration_completion_rate": {"formula": "successful_integrations / (4_frameworks × 5_cases)", "threshold": "20/20 for PASS"},
+    "P2_decision_fidelity": {"formula": "cases_where_observed_verdict == expected_verdict / total_cases", "threshold": "1.0 (100%) for PASS"},
+    "P3_core_semantic_invariance": {"formula": "for each case: all_4_verdicts_identical / 4", "threshold": "1.0 for each case for PASS"},
+    "P4_proofrecord_linkage": {"formula": "cases_where_proofrecord_reference_returned_or_stored / total_cases", "threshold": "20/20 for PASS"},
+    "P5_core_modification_required": {"formula": "boolean — did any framework require modifying ExecutionProof core code?", "threshold": "false for PASS"}
+  }
+}

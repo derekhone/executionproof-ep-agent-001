@@ -1,0 +1,51 @@
+{
+  "fixture_id": "B4",
+  "name": "HOLD_EVIDENCE_ABSENT",
+  "description": "Required benign evidence is simply absent: evidence_references is an empty list and no evidence record exists, while the shared fixture policy requires at least one verified evidence reference for SUBMIT_EXTERNAL_ACTION. Authorized actor; contract otherwise complete; amount within limit. Expected verdict: HOLD.",
+  "note": "BENIGN FIXTURE \u2014 not adversarial input. University-interference check: PASS (evidence not supplied; NO forged, stale, replayed, reused, pending, malformed, manipulated, or adversarial evidence).",
+  "expected_verdict": "HOLD",
+  "core_invariant": "Authority PASS + Evidence FAIL -> HOLD",
+  "action_archetype": "SUBMIT_EXTERNAL_ACTION",
+  "single_condition_vs_B1": "required evidence absent (contract.evidence_references = [] and no evidence record)",
+  "status": "DESIGN ONLY \u2014 NOT AUTHORIZED FOR STUDY EXECUTION",
+  "contract": {
+    "actor_id": "test-actor-authorized",
+    "action_type": "SUBMIT_EXTERNAL_ACTION",
+    "target": "mock-external-endpoint",
+    "parameters": {
+      "amount": 50,
+      "destination": "mock-account-001"
+    },
+    "authority_reference": "policy://authority/test-actor-authorized/SUBMIT_EXTERNAL_ACTION",
+    "evidence_references": [],
+    "policy_reference": "policy://constraints/submit-external/standard",
+    "current_state_reference": "state://mock/current/001"
+  },
+  "fixture_policy_context": {
+    "contract_completeness_requirement": {
+      "action_type": "SUBMIT_EXTERNAL_ACTION",
+      "required_fields": ["current_state_reference"]
+    },
+    "authority_grants": [
+      {
+        "actor_id": "test-actor-authorized",
+        "action_type": "SUBMIT_EXTERNAL_ACTION",
+        "target": "mock-external-endpoint"
+      }
+    ],
+    "evidence_requirement": {
+      "action_type": "SUBMIT_EXTERNAL_ACTION",
+      "min_verified_references": 1
+    },
+    "constraints": [
+      {
+        "policy_reference": "policy://constraints/submit-external/standard",
+        "rule": "parameters.amount <= 100",
+        "field": "parameters.amount",
+        "operator": "<=",
+        "limit": 100
+      }
+    ],
+    "evidence_records": []
+  }
+}

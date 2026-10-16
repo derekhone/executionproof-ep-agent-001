@@ -1,0 +1,43 @@
+=== [openai_agents] creating venv at /home/ubuntu/EP-AGENT-001/.venv-openai_agents
+
+[notice] A new release of pip is available: 23.2.1 -> 26.2.1
+[notice] To update, run: /home/ubuntu/EP-AGENT-001/.venv-openai_agents/bin/python -m pip install --upgrade pip
+No broken requirements found.
+=== [openai_agents] installed openai-agents==0.24.0 (hash-locked) in 0s
+PASS  python         required 3.11.x  running: 3.11.6
+PASS  openai_agents  openai-agents==0.24.0  installed: 0.24.0
+=== [langgraph] creating venv at /home/ubuntu/EP-AGENT-001/.venv-langgraph
+
+[notice] A new release of pip is available: 23.2.1 -> 26.2.1
+[notice] To update, run: /home/ubuntu/EP-AGENT-001/.venv-langgraph/bin/python -m pip install --upgrade pip
+No broken requirements found.
+=== [langgraph] installed langgraph==1.2.15 (hash-locked) in 1s
+PASS  python         required 3.11.x  running: 3.11.6
+PASS  langgraph      langgraph==1.2.15  installed: 1.2.15
+=== [crewai] creating venv at /home/ubuntu/EP-AGENT-001/.venv-crewai
+
+[notice] A new release of pip is available: 23.2.1 -> 26.2.1
+[notice] To update, run: /home/ubuntu/EP-AGENT-001/.venv-crewai/bin/python -m pip install --upgrade pip
+No broken requirements found.
+=== [crewai] installed crewai==1.15.28 (hash-locked) in 1s
+PASS  python         required 3.11.x  running: 3.11.6
+PASS  crewai         crewai==1.15.28  installed: 1.15.28
+=== [maf] creating venv at /home/ubuntu/EP-AGENT-001/.venv-maf
+
+[notice] A new release of pip is available: 23.2.1 -> 26.2.1
+[notice] To update, run: /home/ubuntu/EP-AGENT-001/.venv-maf/bin/python -m pip install --upgrade pip
+No broken requirements found.
+=== [maf] installed agent-framework==1.22.0 (hash-locked) in 2s
+PASS  python         required 3.11.x  running: 3.11.6
+PASS  maf            agent-framework==1.22.0  installed: 1.22.0
+Done. All four venvs installed from hash-locked locks/<fw>.lock (see requirements.lock).
+INSTALL_EXIT=0 SECONDS=13
+ERROR: Hashes are required in --require-hashes mode, but they are missing from some requirements. Here is a list of those requirements along with the hashes their downloaded archives actually had. Add lines like these to your requirements files to prevent tampering. (If you did not enable --require-hashes manually, note that it turns on automatically when any package has a hash.)
+    annotated-doc==0.0.5 --hash=sha256:117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101
+
+[notice] A new release of pip is available: 23.2.1 -> 26.2.1
+[notice] To update, run: /home/ubuntu/.venv-epverifier/bin/python3.11 -m pip install --upgrade pip
+
+[notice] A new release of pip is available: 23.2.1 -> 26.2.1
+[notice] To update, run: /home/ubuntu/.venv-epverifier/bin/python3.11 -m pip install --upgrade pip
+VERIFIER_VENV=0

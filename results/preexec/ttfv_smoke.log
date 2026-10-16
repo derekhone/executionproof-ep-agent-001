@@ -1,0 +1,10 @@
+== crewai
+{"ttfv_ok": true, "at": "2026-10-16T02:58:45.643721+00:00"}
+== maf
+{"ttfv_ok": true, "at": "2026-10-16T02:58:45.729445+00:00"}
+== openai_agents
+{"ttfv_ok": true, "at": "2026-10-16T02:58:45.816313+00:00"}
+== langgraph
+{"ttfv_ok": false, "error": "KeyError: 'args'", "at": "2026-10-16T02:58:45.897924+00:00"}
+== langgraph (rerun after harness fix to ttfv native-shape wrapping; pre-study)
+{"ttfv_ok": true, "at": "2026-10-16T02:59:03.539691+00:00"}

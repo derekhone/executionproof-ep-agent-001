@@ -1,0 +1,371 @@
+{
+  "classification": "PASS",
+  "classification_reason": "Step 4: all PASS conditions hold",
+  "endpoints": {
+    "P1": 20,
+    "P2": 20,
+    "P3": {
+      "B1": {
+        "P3_c": 1.0,
+        "agree": 4,
+        "canonical_hash_identical": true,
+        "of": 4
+      },
+      "B2": {
+        "P3_c": 1.0,
+        "agree": 4,
+        "canonical_hash_identical": true,
+        "of": 4
+      },
+      "B3": {
+        "P3_c": 1.0,
+        "agree": 4,
+        "canonical_hash_identical": true,
+        "of": 4
+      },
+      "B4": {
+        "P3_c": 1.0,
+        "agree": 4,
+        "canonical_hash_identical": true,
+        "of": 4
+      },
+      "B5": {
+        "P3_c": 1.0,
+        "agree": 4,
+        "canonical_hash_identical": true,
+        "of": 4
+      }
+    },
+    "P4": 20,
+    "P5": false,
+    "n_cells": 20
+  },
+  "latency": {
+    "crewai": {
+      "median": 3.8174064999999997,
+      "median_ci95_bootstrap": [
+        3.7421154999999997,
+        3.892069
+      ],
+      "n": 150,
+      "p95": 5.205722,
+      "seed": 20261015
+    },
+    "langgraph": {
+      "median": 1.9307205,
+      "median_ci95_bootstrap": [
+        1.909345,
+        1.94908
+      ],
+      "n": 150,
+      "p95": 2.145732,
+      "seed": 20261015
+    },
+    "maf": {
+      "median": 3.0565205,
+      "median_ci95_bootstrap": [
+        3.022415,
+        3.101953
+      ],
+      "n": 150,
+      "p95": 3.474308,
+      "seed": 20261015
+    },
+    "openai_agents": {
+      "median": 1.9635105,
+      "median_ci95_bootstrap": [
+        1.9401730000000001,
+        1.9957985
+      ],
+      "n": 150,
+      "p95": 2.537063,
+      "seed": 20261015
+    }
+  },
+  "proofrecord_reference": [
+    {
+      "case": "B1",
+      "framework": "openai_agents",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B2",
+      "framework": "openai_agents",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B3",
+      "framework": "openai_agents",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B4",
+      "framework": "openai_agents",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B5",
+      "framework": "openai_agents",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B1",
+      "framework": "langgraph",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B2",
+      "framework": "langgraph",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B3",
+      "framework": "langgraph",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B4",
+      "framework": "langgraph",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B5",
+      "framework": "langgraph",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B1",
+      "framework": "crewai",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B2",
+      "framework": "crewai",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B3",
+      "framework": "crewai",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B4",
+      "framework": "crewai",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B5",
+      "framework": "crewai",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B1",
+      "framework": "maf",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B2",
+      "framework": "maf",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B3",
+      "framework": "maf",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B4",
+      "framework": "maf",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    },
+    {
+      "case": "B5",
+      "framework": "maf",
+      "resolves": true,
+      "returned": true,
+      "unchanged": true
+    }
+  ],
+  "raw_csv_sha256": "3d8876415041bbb09c77bbe8971a8e2b9091573cec04fd4ec1dec6dd0808cc86",
+  "secondary": {},
+  "verdict_comparison": [
+    {
+      "case": "B1",
+      "expected": "ALLOW",
+      "framework": "openai_agents",
+      "match": true,
+      "observed": "ALLOW"
+    },
+    {
+      "case": "B2",
+      "expected": "HOLD",
+      "framework": "openai_agents",
+      "match": true,
+      "observed": "HOLD"
+    },
+    {
+      "case": "B3",
+      "expected": "DENY",
+      "framework": "openai_agents",
+      "match": true,
+      "observed": "DENY"
+    },
+    {
+      "case": "B4",
+      "expected": "HOLD",
+      "framework": "openai_agents",
+      "match": true,
+      "observed": "HOLD"
+    },
+    {
+      "case": "B5",
+      "expected": "HOLD",
+      "framework": "openai_agents",
+      "match": true,
+      "observed": "HOLD"
+    },
+    {
+      "case": "B1",
+      "expected": "ALLOW",
+      "framework": "langgraph",
+      "match": true,
+      "observed": "ALLOW"
+    },
+    {
+      "case": "B2",
+      "expected": "HOLD",
+      "framework": "langgraph",
+      "match": true,
+      "observed": "HOLD"
+    },
+    {
+      "case": "B3",
+      "expected": "DENY",
+      "framework": "langgraph",
+      "match": true,
+      "observed": "DENY"
+    },
+    {
+      "case": "B4",
+      "expected": "HOLD",
+      "framework": "langgraph",
+      "match": true,
+      "observed": "HOLD"
+    },
+    {
+      "case": "B5",
+      "expected": "HOLD",
+      "framework": "langgraph",
+      "match": true,
+      "observed": "HOLD"
+    },
+    {
+      "case": "B1",
+      "expected": "ALLOW",
+      "framework": "crewai",
+      "match": true,
+      "observed": "ALLOW"
+    },
+    {
+      "case": "B2",
+      "expected": "HOLD",
+      "framework": "crewai",
+      "match": true,
+      "observed": "HOLD"
+    },
+    {
+      "case": "B3",
+      "expected": "DENY",
+      "framework": "crewai",
+      "match": true,
+      "observed": "DENY"
+    },
+    {
+      "case": "B4",
+      "expected": "HOLD",
+      "framework": "crewai",
+      "match": true,
+      "observed": "HOLD"
+    },
+    {
+      "case": "B5",
+      "expected": "HOLD",
+      "framework": "crewai",
+      "match": true,
+      "observed": "HOLD"
+    },
+    {
+      "case": "B1",
+      "expected": "ALLOW",
+      "framework": "maf",
+      "match": true,
+      "observed": "ALLOW"
+    },
+    {
+      "case": "B2",
+      "expected": "HOLD",
+      "framework": "maf",
+      "match": true,
+      "observed": "HOLD"
+    },
+    {
+      "case": "B3",
+      "expected": "DENY",
+      "framework": "maf",
+      "match": true,
+      "observed": "DENY"
+    },
+    {
+      "case": "B4",
+      "expected": "HOLD",
+      "framework": "maf",
+      "match": true,
+      "observed": "HOLD"
+    },
+    {
+      "case": "B5",
+      "expected": "HOLD",
+      "framework": "maf",
+      "match": true,
+      "observed": "HOLD"
+    }
+  ]
+}

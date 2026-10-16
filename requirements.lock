@@ -1,0 +1,23 @@
+# EP-AGENT-001 requirements.lock — INDEX OF PER-FRAMEWORK HASH-LOCKED REQUIREMENTS
+# Python: CPython 3.11.x (generated and verified on 3.11.6, Linux x86_64, pip 23.2.1).
+# Why per-framework: the four frameworks are installed in SEPARATE venvs (dependency sets differ and are not
+# co-installable as one set). Each venv installs ONLY from its own lock file:
+#     python3.11 -m venv .venv-<fw> && .venv-<fw>/bin/pip install --no-deps --require-hashes -r locks/<fw>.lock
+# Every entry in every lock file is "name==exact.version --hash=sha256:<artifact hash>" (no ranges, no URLs,
+# no editable installs). Method: scripts/setup/generate_and_verify_locks.sh (pass 1 resolve+record hashes in a
+# fresh venv; pass 2 clean venv install with --require-hashes, `pip check`, check_versions.py). Both passes
+# succeeded for all four frameworks on 2026-10-15. SETUP ARTIFACT — NOT EXPERIMENTAL EVIDENCE. No fixture run.
+#
+# Direct (study) pins:
+#   openai-agents==0.24.0   langgraph==1.2.15   crewai==1.15.28   agent-framework==1.22.0
+# Google ADK: ELIGIBLE FUTURE EXTENSION / NOT INCLUDED IN v1 — no lock file.
+#
+# sha256 of each lock file (also covered by MANIFEST.sha256):
+#   4e34ff306f8296ebd0a1d39059486ecedd3a898dc7c8cc31dfdfe1a936b30289  locks/crewai.lock
+#   2faf5130688f96861ae6f3b26d8ffa76661a561b686dc3012c5b711c224ef1e4  locks/langgraph.lock
+#   2a996da7146fe17758ace06f22cc31f3bcf4f859e96415a3fdf09062b38ff278  locks/maf.lock
+#   abd845c0233c697e46f324a9919f9ace0c0b0ba198f9d22c1336cf4e7e535874  locks/openai_agents.lock
+#   openai_agents: 38 pinned packages
+#   langgraph: 38 pinned packages
+#   crewai: 137 pinned packages
+#   maf: 212 pinned packages

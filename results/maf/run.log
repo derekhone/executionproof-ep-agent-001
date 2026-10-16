@@ -1,0 +1,5 @@
+{"framework": "maf", "case": "B1", "observed": "ALLOW", "error": false}
+{"framework": "maf", "case": "B2", "observed": "HOLD", "error": false}
+{"framework": "maf", "case": "B3", "observed": "DENY", "error": false}
+{"framework": "maf", "case": "B4", "observed": "HOLD", "error": false}
+{"framework": "maf", "case": "B5", "observed": "HOLD", "error": false}
